@@ -1,0 +1,8 @@
+.page {
+    background-color: #21262d;
+  }
+  .page__content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
