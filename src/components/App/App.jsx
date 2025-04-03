@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 //Import Components
 import Header from "../Header/Header";
 import Main from "../Main/Main"
-import Events from "../Events/Events";
+import Evts from "../Evts/Evts";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Main/>}/>
-          <Route path="/events" element={<Events/>}/>
+          <Route path="/events" element={<Evts/>}/>
         </Routes>
         
       </div>
