@@ -4,7 +4,7 @@ import { fetchSpawnsData } from "../../utils/api";
 import { useEffect, useState } from "react";
 
 function Evts() {
-  const eventSpawnNums = [351, 412, 10034, 10035];
+  const eventSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
   const [eventSpawns, setEventSpawns] = useState([]);
 
   useEffect(() => {

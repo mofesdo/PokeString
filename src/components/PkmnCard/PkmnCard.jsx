@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./PkmnCard.css"
-function PkmnCard({pkmn, form}){
+function PkmnCard({pkmn}){
     console.log(pkmn);
     return (
         <li className="pkmn-card" key={pkmn.id}>
