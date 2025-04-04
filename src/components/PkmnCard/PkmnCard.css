@@ -11,10 +11,12 @@
 .pkmn-card__name{
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 .pkmn-card__sprite{
     margin: 0;
     padding: 0;
-    width: 160px;
-    height: 160px;
+    max-width: 140px;
+    max-height: 140px;
+    object-fit: cover;
 }

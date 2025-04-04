@@ -4,20 +4,31 @@ import { fetchSpawnsData } from "../../utils/api";
 import { useEffect, useState } from "react";
 
 function Evts() {
-  const eventSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
-  const spawnString = eventSpawnNums.filter((num) => num < 1020).toString();
-  console.log(spawnString);
-  const [eventSpawns, setEventSpawns] = useState([]);
+  const wildSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
+  const spawnString = wildSpawnNums.filter((num) => num < 1020).toString();
+  const [wildSpawns, setWildSpawns] = useState([]);
+
+  const raidSpawnNums = [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413];
+  const [raidSpawns, setRaidSpawns] = useState([]);
 
   useEffect(() => {
-    fetchSpawnsData(eventSpawnNums)
+    fetchSpawnsData(wildSpawnNums)
       .then((data) => {
         data.map(() => {
-          setEventSpawns([...eventSpawns, ...data]);
+          setWildSpawns([...wildSpawns, ...data]);
         });
       })
       .catch((error) => console.error("Operation failed:", error));
   }, []);
+
+  useEffect(() => {
+    fetchSpawnsData(raidSpawnNums).then((data) => {
+      data.map(() => {
+        setRaidSpawns([...raidSpawns, ...data]);
+      });
+    });
+  }, []);
+
   const copyString = () => {
     navigator.clipboard.writeText(spawnString);
   };
@@ -25,7 +36,7 @@ function Evts() {
     <div className="events">
       <h2 className="events__heading">Wild Spawns</h2>
       <ul className="pokemon__list">
-        {eventSpawns.map((pkmn) => (
+        {wildSpawns.map((pkmn) => (
           <PkmnCard key={pkmn.id} pkmn={pkmn} />
         ))}
       </ul>
@@ -35,6 +46,12 @@ function Evts() {
           Copy to Clipboard
         </button>
       </div>
+      <h2 className="events__heading">Raid Spawns</h2>
+      <ul className="pokemon__list">
+        {raidSpawns.map((pkmn) => (
+          <PkmnCard key={pkmn.id} pkmn={pkmn} />
+        ))}
+      </ul>
     </div>
   );
 }
