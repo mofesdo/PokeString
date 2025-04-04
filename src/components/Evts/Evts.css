@@ -5,3 +5,18 @@
     flex-wrap: wrap;
     margin: 16px auto;
 }
+
+.events__heading{
+    color: #ecf2f8;
+    padding-left: 40px;
+}
+.event__copy-container{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.events__string{
+    background-color: #ecf2f8;
+    color: #0d1117;
+}
