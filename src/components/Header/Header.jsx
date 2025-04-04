@@ -9,6 +9,7 @@ function Header() {
         <img src={logo} alt="" className="header__logo" />
       </Link>
       <h1 className="header__title">PokeString</h1>
+      <h2 className="header__beta">Beta</h2>
       <ul className="header__container">
         <Link to="/events" className="header__link">
           <li className="header__item">Events</li>

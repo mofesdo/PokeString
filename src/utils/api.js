@@ -1,7 +1,7 @@
-const urlBase = "https://pokeapi.co/api/v2/pokemon/";
+const urlBase = "https://pokeapi.co/api/v2/pokemon-form/";
 
 function getPokemon(id) {
-  return fetch(`${urlBase}${id}/`).then(checkResponse);
+  return fetch(`${urlBase}${id}`).then(checkResponse);
 }
 
 function checkResponse(res) {
