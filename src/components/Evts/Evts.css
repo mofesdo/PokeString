@@ -6,6 +6,11 @@
     margin: 16px auto;
 }
 
+.event__title{
+    color: #ecf2f8;
+    padding-left: 40px;
+}
+
 .events__heading{
     color: #ecf2f8;
     padding-left: 40px;
