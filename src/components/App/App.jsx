@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "../Header/Header";
 import Main from "../Main/Main"
 import Evts from "../Evts/Evts";
+import Create from "../Create/Create";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path="/events" element={<Evts/>}/>
+          <Route path="/create" element={<Create/>}/>
         </Routes>
         
       </div>

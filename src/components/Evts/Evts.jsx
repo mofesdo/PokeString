@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 
 function Evts() {
   const wildSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
-  const spawnString = wildSpawnNums.filter((num) => num < 1020).toString();
+  const wildString = wildSpawnNums.filter((num) => num < 1020).toString();
   const [wildSpawns, setWildSpawns] = useState([]);
 
   const raidSpawnNums = [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413];
+  const raidString = raidSpawnNums.filter((num) => num < 1020).toString();
   const [raidSpawns, setRaidSpawns] = useState([]);
 
   useEffect(() => {
@@ -29,8 +30,8 @@ function Evts() {
     });
   }, []);
 
-  const copyString = () => {
-    navigator.clipboard.writeText(spawnString);
+  const copyString = (str) => {
+    navigator.clipboard.writeText(str);
   };
   return (
     <div className="events">
@@ -41,8 +42,8 @@ function Evts() {
         ))}
       </ul>
       <div className="event__copy-container">
-        <p className="events__string">Search String: {spawnString} </p>
-        <button className="events__copy-btn" onClick={copyString}>
+        <p className="events__string">Search String: {wildString} </p>
+        <button className="events__copy-btn" onClick={copyString(wildString)}>
           Copy to Clipboard
         </button>
       </div>
@@ -52,6 +53,12 @@ function Evts() {
           <PkmnCard key={pkmn.id} pkmn={pkmn} />
         ))}
       </ul>
+      <div className="event__copy-container">
+        <p className="events__string">Search String: {raidString} </p>
+        <button className="events__copy-btn" onClick={copyString(raidString)}>
+          Copy to Clipboard
+        </button>
+      </div>
     </div>
   );
 }

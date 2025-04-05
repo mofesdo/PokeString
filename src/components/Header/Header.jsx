@@ -14,12 +14,9 @@ function Header() {
         <Link to="/events" className="header__link">
           <li className="header__item">Events</li>
         </Link>
-
-        <li className="header__item">
-          <a href="" className="header__link">
-            Create
-          </a>
-        </li>
+        <Link to="/create" className="header__link">
+          <li className="header__item">Create</li>
+        </Link>
         <li className="header__item">
           <a href="" className="header__link">
             Popular
