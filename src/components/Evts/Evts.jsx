@@ -4,40 +4,52 @@ import PkmnCard from "../PkmnCard/PkmnCard";
 import { fetchSpawnsData } from "../../utils/api";
 import { useEffect, useState } from "react";
 
-function Evts({name, wildSpawnNums, raidSpawnNums}) {
-  console.log("opened via route");
+function Evts({event}) {
+  console.log(event);
   // const wildSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
-  const wildString = wildSpawnNums.filter((num) => num < 1020).toString();
+
+  const [wildString, setWildString] = useState('');
   const [wildSpawns, setWildSpawns] = useState([]);
 
   // const raidSpawnNums = [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413];
-  const raidString = raidSpawnNums.filter((num) => num < 1020).toString();
+  const [raidString, setRaidString] = useState('');
   const [raidSpawns, setRaidSpawns] = useState([]);
 
   useEffect(() => {
-    fetchSpawnsData(wildSpawnNums)
+    fetchSpawnsData(event.wildSpawns)
       .then((data) => {
         data.map(() => {
           setWildSpawns([...wildSpawns, ...data]);
+          setWildString(event.wildSpawns.filter((num) => num < 1020).toString());
         });
       })
       .catch((error) => console.error("Operation failed:", error));
   }, []);
 
   useEffect(() => {
-    fetchSpawnsData(raidSpawnNums).then((data) => {
+    fetchSpawnsData(event.raidSpawns).then((data) => {
       data.map(() => {
         setRaidSpawns([...raidSpawns, ...data]);
+        setRaidString(event.raidSpawns.filter((num) => num < 1020).toString());
       });
     });
   }, []);
 
-  const copyString = (str) => {
-    navigator.clipboard.writeText(str);
-  };
+  const copyToClipboard = (str) => {
+    const textToCopy = str;
+  
+    // Use the Clipboard API to copy the string to the clipboard
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        console.log("Copied to clipboard: " + str)
+      })
+      .catch(err => {
+        console.error("Error copying text: ", err);
+      });
+  }
   return (
     <div className="events">
-      <h1 className="event__title">{name}</h1>
+      <h1 className="event__title">{event.name}</h1>
       <h2 className="events__heading">Wild Spawns</h2>
       <ul className="pokemon__list">
         {wildSpawns.map((pkmn) => (
@@ -46,7 +58,7 @@ function Evts({name, wildSpawnNums, raidSpawnNums}) {
       </ul>
       <div className="event__copy-container">
         <p className="events__string">Search String: {wildString} </p>
-        <button className="events__copy-btn" onClick={copyString(wildString)}>
+        <button className="events__copy-btn" onClick={()=>copyToClipboard(wildString)}>
           Copy to Clipboard
         </button>
       </div>
@@ -58,7 +70,7 @@ function Evts({name, wildSpawnNums, raidSpawnNums}) {
       </ul>
       <div className="event__copy-container">
         <p className="events__string">Search String: {raidString} </p>
-        <button className="events__copy-btn" onClick={copyString(raidString)}>
+        <button className="events__copy-btn" onClick={()=>copyToClipboard(raidString)}>
           Copy to Clipboard
         </button>
       </div>

@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-key */
 import "./EventsPage.css";
-import events from "./events.json";
 import EventModal from "../EventModal/EventModal";
 import { Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
-function EventsPage() {
+function EventsPage({events}) {
   console.log(events);
   return (
     <div className="events-page">
@@ -18,6 +17,7 @@ function EventsPage() {
         ))}
       </ul>
       <p>test</p>
+      <Outlet />
     </div>
   );
 }

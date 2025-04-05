@@ -8,6 +8,7 @@ import Main from "../Main/Main";
 import Evts from "../Evts/Evts";
 import Create from "../Create/Create";
 import EventsPage from "../EventsPage/EventsPage";
+import events from "../../events.json";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/events" element={<EventsPage />}>
-            <Route path="/events/Stunning-Styles" element={<Evts/>} />
+          <Route path="/events" element={<EventsPage events={events}/>}>
           </Route>
+          <Route path="/events/Stunning-Styles" element={<Evts event={events[0]}/>} />
           <Route path="/create" element={<Create />} />
         </Routes>
       </div>
