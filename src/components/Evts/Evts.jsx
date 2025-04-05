@@ -5,6 +5,7 @@ import { fetchSpawnsData } from "../../utils/api";
 import { useEffect, useState } from "react";
 
 function Evts({name, wildSpawnNums, raidSpawnNums}) {
+  console.log("opened via route");
   // const wildSpawnNums = [351, 10028, 10029, 10030, 412, 10034, 10035];
   const wildString = wildSpawnNums.filter((num) => num < 1020).toString();
   const [wildSpawns, setWildSpawns] = useState([]);

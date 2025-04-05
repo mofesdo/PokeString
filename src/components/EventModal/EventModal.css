@@ -1,0 +1,7 @@
+.event-modal{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 16px;
+}
