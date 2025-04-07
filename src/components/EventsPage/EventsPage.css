@@ -1,6 +1,7 @@
 
 .events-page__list{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    gap: 24px;
 }

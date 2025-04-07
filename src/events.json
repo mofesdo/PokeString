@@ -6,5 +6,13 @@
     "wildSpawns": [351, 10028, 10029, 10030, 412, 10034, 10035],
     "raidSpawns": [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413],
     "date": "April 3rd, 10AM - April 7th, 8PM"
+  },
+  {
+    "id": 2,
+    "name": "Spring Into Spring 2025",
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-04-09-spring-into-spring-2025/spring-into-spring-2025.jpg",
+    "wildSpawns": [223, 661, 829],
+    "raidSpawns": [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413],
+    "date": "April 9th, 10AM - April 14th, 8PM"
   }
 ]
