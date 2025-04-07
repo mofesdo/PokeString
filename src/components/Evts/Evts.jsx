@@ -50,6 +50,7 @@ function Evts({event}) {
   return (
     <div className="events">
       <h1 className="event__title">{event.name}</h1>
+      <img src={event.image} alt={event.name} className="event__img" />
       <h2 className="events__heading">Wild Spawns</h2>
       <ul className="pokemon__list">
         {wildSpawns.map((pkmn) => (

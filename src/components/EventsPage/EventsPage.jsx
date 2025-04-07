@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
 import "./EventsPage.css";
 import EventModal from "../EventModal/EventModal";
