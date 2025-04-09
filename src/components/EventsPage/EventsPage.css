@@ -1,8 +1,8 @@
 .events-page{
     font-family: "Lato", "Open Sans", sans-serif;
+    margin: 0 40px 12px;
 }
 .events-page__title{
-    margin: 12px 40px;
     color: #ecf2f8;
 }
 .events-page__list{
@@ -10,7 +10,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 24px;
-    margin: 0 40px;
     padding: 0;
 }
 
