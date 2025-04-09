@@ -1,4 +1,10 @@
-
+.events-page{
+    font-family: "Lato", "Open Sans", sans-serif;
+}
+.events-page__title{
+    margin: 12px 40px;
+    color: #ecf2f8;
+}
 .events-page__list{
     display: flex;
     flex-direction: column;

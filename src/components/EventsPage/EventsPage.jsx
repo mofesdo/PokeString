@@ -17,7 +17,6 @@ function EventsPage({events}) {
           </Link>
         ))}
       </ul>
-      <p>test</p>
       <Outlet />
     </div>
   );
