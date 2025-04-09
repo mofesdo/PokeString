@@ -4,4 +4,14 @@
     flex-direction: column;
     justify-content: center;
     gap: 24px;
+    margin: 0 40px;
+    padding: 0;
+}
+
+.events-page__links{
+    text-decoration: none;
+    color: #ecf2f8;
+}
+.events-page__links:hover{
+    color: #faa356;
 }

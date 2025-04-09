@@ -1,7 +1,30 @@
 .event-modal{
     display: flex;
     flex-direction: row;
-    height: 200px;
+    width: 100%;
     border: 1px solid white;
     border-radius: 16px;
+}
+
+.event-modal__img{
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 35%;
+    border-radius: 16px;
+}
+.event-modal__info-container{
+    padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+    .event-modal{
+        flex-direction: column;
+    }
+    .event-modal__img{
+        max-width: 100%;
+    }
+    .event-modal__info-container{
+        padding: 0 10px;
+    }
+
 }
