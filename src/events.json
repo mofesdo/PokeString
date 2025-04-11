@@ -14,5 +14,13 @@
     "wildSpawns": [223, 661, 829],
     "raidSpawns": [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413],
     "date": "April 9th, 10AM - April 14th, 8PM"
+  },
+  {
+    "id": 3,
+    "name": "Pokémon Horizons The Series Celebration Event",
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-04-16-pokemon-horizons-the-series-celebration-event-2025/pokemon-horizons-event.jpg",
+    "wildSpawns": [223, 661, 829],
+    "raidSpawns": [422, 10039, 677, 744, 10419, 10420, 10421, 724, 10413],
+    "date": "April 16th, 10AM - April 22nd, 8PM"
   }
 ]
