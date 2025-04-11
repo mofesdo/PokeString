@@ -4,6 +4,8 @@
     gap: 12px;
     flex-wrap: wrap;
     margin: 16px auto;
+    padding: 0;
+    justify-content: center;
 }
 .events{
     display: flex;
@@ -14,10 +16,11 @@
 
 .event__title{
     color: #ecf2f8;
+    text-align: center;
 }
 .event__img{
     height: 100%;
-    width: 960px;
+    width: 768px;
 }
 
 .events__heading{
@@ -34,7 +37,7 @@
     color: #0d1117;
 }
 
-@media screen and (max-width: 960px) {
+@media (max-width: 768px) {
     .event__img{
         min-height: 48vw;
         max-width: 100%;
