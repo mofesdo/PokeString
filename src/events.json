@@ -6,5 +6,15 @@
     "wildSpawns": [195, 213, 218, 299, 361, 906, 907, 909, 912, 921],
     "raidSpawns": [25, 113, 744, 6, 10215, 376, 907],
     "date": "April 16th, 10AM - April 22nd, 8PM"
+  },
+  {
+    "id": 1,
+    "name": "Sweet Discoveries",
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-04-24-sweet-discoveries-2025/sweet-discoveries.jpg",
+    "wildSpawns": [10193, 63, 69, 225, 316, 399, 517, 761, 819, 143, 213, 775, 840],
+    "raidSpawns": [],
+    "researchSpawns": [],
+    "eggSpawns": [225,420, 446, 819],
+    "date": "April 24th, 10AM - April 29th, 8PM"
   }
 ]

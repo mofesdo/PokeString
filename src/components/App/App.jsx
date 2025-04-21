@@ -18,9 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/events" element={<EventsPage events={events}/>}/>
-          <Route path="/events/Stunning-Styles" element={<Evts event={events[0]}/>} />
-          <Route path="/events/Spring-Into-Spring-2025" element={<Evts event={events[1]}/>} />
           <Route path="/events/Pokémon-Horizons-The-Series-Celebration-Event" element={<Evts event={events[0]}/>} />
+          <Route path="/events/Sweet-Discoveries" element={<Evts event={events[1]}/>} />
           <Route path="/create" element={<Create />} />
         </Routes>
       </div>
