@@ -15,6 +15,12 @@ function Evts({event}) {
   const [raidString, setRaidString] = useState('');
   const [raidSpawns, setRaidSpawns] = useState([]);
 
+  const [researchString, setResearchString] = useState('');
+  const [researchSpawns, setResearchSpawns] = useState([]);
+
+  const [eggString, setEggString] = useState('');
+  const [eggSpawns, setEggSpawns] = useState([]);
+
   useEffect(() => {
     fetchSpawnsData(event.wildSpawns)
       .then((data) => {
@@ -31,6 +37,23 @@ function Evts({event}) {
       data.map(() => {
         setRaidSpawns([...raidSpawns, ...data]);
         setRaidString(event.raidSpawns.filter((num) => num < 1020).toString());
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    fetchSpawnsData(event.researchSpawns).then((data) => {
+      data.map(() => {
+        setResearchSpawns([...researchSpawns, ...data]);
+        setResearchString(event.researchSpawns.filter((num) => num < 1020).toString());
+      });
+    });
+  }, []);
+  useEffect(() => {
+    fetchSpawnsData(event.eggSpawns).then((data) => {
+      data.map(() => {
+        setEggSpawns([...eggSpawns, ...data]);
+        setEggString(event.eggSpawns.filter((num) => num < 1020).toString());
       });
     });
   }, []);
@@ -72,6 +95,18 @@ function Evts({event}) {
       <div className="event__copy-container">
         <p className="events__string">Search String: {raidString} </p>
         <button className="events__copy-btn" onClick={()=>copyToClipboard(raidString)}>
+          Copy to Clipboard
+        </button>
+      </div>
+      <h2 className="events__heading">Egg Spawns</h2>
+      <ul className="pokemon__list">
+        {eggSpawns.map((pkmn) => (
+          <PkmnCard key={pkmn.id} pkmn={pkmn} />
+        ))}
+      </ul>
+      <div className="event__copy-container">
+        <p className="events__string">Search String: {eggString} </p>
+        <button className="events__copy-btn" onClick={()=>copyToClipboard(eggString)}>
           Copy to Clipboard
         </button>
       </div>
