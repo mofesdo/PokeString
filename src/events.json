@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 0,
     "name": "Pokémon Horizons The Series Celebration Event",
     "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-04-16-pokemon-horizons-the-series-celebration-event-2025/pokemon-horizons-event.jpg",
     "wildSpawns": [195, 213, 218, 299, 361, 906, 907, 909, 912, 921],
@@ -16,5 +16,15 @@
     "researchSpawns": [],
     "eggSpawns": [225,420, 446, 819],
     "date": "April 24th, 10AM - April 29th, 8PM"
+  },
+  {
+    "id": 2,
+    "name": "Growing Up",
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-05-02-growing-up/growing-up-event.jpg",
+    "wildSpawns": [129, 320, 333, 590, 702, 742, 767, 821, 919],
+    "raidSpawns": [],
+    "researchSpawns": [],
+    "eggSpawns": [440, 447, 767, 439, 848],
+    "date": "May 2nd, 10AM - May 7th, 8PM"
   }
 ]
