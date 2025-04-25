@@ -1,6 +1,6 @@
 //import { useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 //Import Components
 import Header from "../Header/Header";
@@ -22,6 +22,7 @@ function App() {
           <Route path="/events/Sweet-Discoveries" element={<Evts event={events[1]}/>} />
           <Route path="/events/Growing-Up" element={<Evts event={events[2]}/>} />
           <Route path="/create" element={<Create />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </div>
