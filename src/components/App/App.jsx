@@ -18,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/events" element={<EventsPage events={events}/>}/>
-          <Route path="/events/Sweet-Discoveries" element={<Evts event={events[0]}/>} />
-          <Route path="/events/Growing-Up" element={<Evts event={events[1]}/>} />
-          <Route path="/events/Crown-Clash" element={<Evts event={events[2]}/>} />
+          <Route path="/events/Sweet-Discoveries" element={<Evts event={events[1]}/>} />
+          <Route path="/events/Growing-Up" element={<Evts event={events[2]}/>} />
+          <Route path="/events/Crown-Clash" element={<Evts event={events[3]}/>} />
+          <Route path="/events/Pokemon-Go-Fest-2025-Global" element={<Evts event={events[4]}/>} />
           <Route path="/create" element={<Create />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

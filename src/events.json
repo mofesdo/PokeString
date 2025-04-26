@@ -36,5 +36,15 @@
     "researchSpawns": [],
     "eggSpawns": [],
     "date": "May 10th, 10AM - May 19th, 8PM"
+  },
+  {
+    "id": 3,
+    "name": "Pokemon Go Fest 2025 Global",
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-05-10-crown-clash/crown-clash.jpg",
+    "wildSpawns": [79, 287, 393, 415, 495, 667, 624],
+    "raidSpawns": [215, 599, 624, 31, 34],
+    "researchSpawns": [],
+    "eggSpawns": [],
+    "date": "May 10th, 10AM - May 19th, 8PM"
   }
 ]
