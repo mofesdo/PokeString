@@ -40,9 +40,9 @@
   {
     "id": 3,
     "name": "Pokemon Go Fest 2025 Global",
-    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-05-10-crown-clash/crown-clash.jpg",
-    "wildSpawns": [79, 287, 393, 415, 495, 667, 624],
-    "raidSpawns": [215, 599, 624, 31, 34],
+    "image": "https://cdn.leekduck.com/assets/img/events/article-images/2025/2025-06-28-pokemon-go-fest-2025-global/go-fest-global.jpg",
+    "wildSpawns": [228, 322, 355, 574, 622, 661, 669, 690, 909, 703, 66, 125, 216, 559, 650, 669, 674, 702, 739, 619, 1, 220, 363, 393, 459, 517, 605, 669, 712, 996, 35, 72, 303],
+    "raidSpawns": [],
     "researchSpawns": [],
     "eggSpawns": [],
     "date": "May 10th, 10AM - May 19th, 8PM"
