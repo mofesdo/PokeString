@@ -25,11 +25,11 @@ function Header() {
         <Link to="/create" className="header__link">
           <li className="header__item">Create</li>
         </Link>
+        <Link to="/popular" className="header__link">
         <li className="header__item">
-          <a href="" className="header__link">
             Popular
-          </a>
         </li>
+        </Link>
       </ul>
     </header>
   );
