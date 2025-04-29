@@ -1,0 +1,15 @@
+{
+  "pkmnStrings": [
+    { "string": "4*", "Description": "Displays all hundos/perfect pokemon" },
+    {
+      "string": "shadow",
+      "Description": "Displays all shadow pokemon"
+    }
+  ],
+  "friendStrings": [
+    {
+      "string": "friendlevel1",
+      "Description": "Displays all friends with the friendship level of 1"
+    }
+  ]
+}
