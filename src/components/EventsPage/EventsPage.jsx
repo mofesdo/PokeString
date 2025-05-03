@@ -12,7 +12,7 @@ function EventsPage({events}) {
       <h1 className="events-page__title">Events</h1>
       <ul className="events-page__list">
         {events.map((item) => (
-          <Link to={`/events/${item.name.replaceAll(" ", "-")}`} key={item.id} className="events-page__links">
+          <Link to={`/events/${item.name.replaceAll(" ", "-").toLowerCase()}`} key={item.id} className="events-page__links">
             <EventModal event={item} />
           </Link>
         ))}
